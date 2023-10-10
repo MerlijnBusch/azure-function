@@ -22,5 +22,10 @@ namespace GithubSlackTrigger.Service
 
             await _logRepository.CreateAsync(request);
         }
+
+        public async Task<IEnumerable<RequestModel>> GetAll()
+        {
+            return await _logRepository.GetAllAsync();
+        }
     }
 }

@@ -41,6 +41,24 @@ namespace GithubSlackTrigger.DAL
             }
         }
 
+        public Task<IEnumerable<T>> GetAllAsync()
+        {
+            List<T> entities    = new();
+            TableQuery<T> query = new();
+
+            if (_table == null)
+            {
+                throw new InvalidOperationException();
+            }
+
+            foreach (T entity in _table.ExecuteQuerySegmentedAsync(query, null).Result)
+            {
+                entities.Add(entity);
+            }
+
+            return Task.FromResult<IEnumerable<T>>(entities);
+        }
+
         private string GetDatabaseUrlFromConfigurations()
         {
             string? url = Environment.GetEnvironmentVariable("MyDatabaseConnection");

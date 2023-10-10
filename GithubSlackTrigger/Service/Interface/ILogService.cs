@@ -10,5 +10,7 @@ namespace GithubSlackTrigger.Service.Interface
     public interface ILogService
     {
         public Task Add(RequestModel request);
+
+        public Task<IEnumerable<RequestModel>> GetAll();
     }
 }

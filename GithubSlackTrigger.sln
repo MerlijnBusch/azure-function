@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GithubSlackTrigger", "GithubSlackTrigger\GithubSlackTrigger.csproj", "{8FB8F353-3FE4-4777-A519-EE064614F86E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GithubSlackTrigger", "GithubSlackTrigger\GithubSlackTrigger.csproj", "{8FB8F353-3FE4-4777-A519-EE064614F86E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

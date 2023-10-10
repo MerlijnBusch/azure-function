@@ -12,6 +12,8 @@ namespace GithubSlackTrigger.DAL.Interface
         public interface IBaseRepository<T> where T : TableEntity, new()
         {
             Task CreateAsync(T entity);
+
+            Task<IEnumerable<T>> GetAllAsync();
         }
     }
 }
