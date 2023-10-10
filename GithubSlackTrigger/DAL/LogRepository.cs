@@ -10,7 +10,8 @@ namespace GithubSlackTrigger.DAL
         public LogRepository(ILoggerFactory loggerFactory) : base(loggerFactory)
         {
             _logger = loggerFactory.CreateLogger<BaseRepository<RequestModel>>();
-            _table = _tableClient.GetTableReference("logs");
+            _table  = _tableClient.GetTableReference("logs");
+
             _table.CreateIfNotExistsAsync().GetAwaiter().GetResult();
         }
     }
