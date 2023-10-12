@@ -29,9 +29,8 @@ namespace GithubSlackTrigger.Controller
                 response = req.CreateResponse(HttpStatusCode.OK);
                 await response.WriteAsJsonAsync(data);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                _logger.LogError($"Error: {ex.Message} at {ex.StackTrace}, details: {ex.GetBaseException()}");
                 response = req.CreateResponse(HttpStatusCode.UnprocessableEntity);
             }
 
